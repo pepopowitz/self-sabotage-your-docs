@@ -1,0 +1,11 @@
+author: Steven Hicks
+title: 'Misadventures in SEO: How to self-sabotage your documentation'
+description: 'Slides for "Misadventures in SEO: How to self-sabotage your documentation," a presentation by Steven Hicks'
+output: build/index.html
+theme: steve
+themeSet: src/theme.css
+url: https://self-sabotage-your-docs.stevenhicks.me
+# ogImage:
+bespoke:
+  # vvv turn off the on-screen controller (but P will still open presenter mode)
+  osc: false

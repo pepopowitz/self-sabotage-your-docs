@@ -1,0 +1,150 @@
+/* @theme steve */
+
+@import 'default';
+
+/* color variables */
+
+/* section {
+  --color-accent-emphasis: #0969da;
+  --color-accent-fg: #0969da;
+  --color-attention-subtle: #fff8c5;
+  --color-border-default: #d0d7de;
+  --color-border-muted: #d8dee4;
+  --color-canvas-default: #fff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-danger-fg: #cf222e;
+  --color-fg-default: #24292f;
+  --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781;
+  --color-neutral-muted: rgba(175,184,193,.2);
+  --h1-color: #246;
+  --header-footer-color: hsla(0,0%,40%,.75);
+  --heading-strong-color: #48c;
+  --paginate-color: #777;
+}
+
+section:where(.invert) {
+  --color-accent-emphasis: #1f6feb;
+  --color-accent-fg: #58a6ff;
+  --color-attention-subtle: rgba(187,128,9,.15);
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+  --color-danger-fg: #f85149;
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-subtle: #6e7681;
+  --color-neutral-muted: hsla(215,8%,47%,.4);
+  --h1-color: #cee7ff;
+  --header-footer-color: hsla(0,0%,60%,.75);
+  --heading-strong-color: #7bf;
+  --paginate-color: #999;
+} */
+
+/* root */
+section {
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  font-size: 2.4em;
+  background-color: #E3E4CC;
+  /* theme colors generated at https://coolors.co/e3e4cc-3dcee1-ee7b30-721121-003552 */
+  --h1-color: #003552;
+  --theme-color-alt: #003552;
+  --theme-color-alt-light: #3DCEE1; 
+  --heading-strong-color: #198F9F;
+  --color-accent-fg: #198F9F;
+  --color-fg-default: #003552;
+  --color-border-default: #198F9F;
+  /* --color-fg-muted: #57606a;
+  --color-fg-subtle: #6e7781; */
+}
+
+section.invert {
+  background-color: var(--theme-color-alt);
+  color: #fff;
+  --h1-color: #fff;
+  --heading-strong-color: #3DCEE1;
+  --color-accent-fg: #3DCEE1;
+}
+
+/* headings */
+section h1 {
+  font-weight: normal;
+}
+
+section h2, section h3, section h4, section h5, section h6 {
+  font-weight: normal;
+}
+
+/* put the underlines back on links! */
+section a {
+  text-decoration: underline;
+}
+
+/* specific slides */
+section.title h1, section.title h3 {
+  /* nudge the headings left/down so that the text doesn't overlay the background image */
+  transform: translate(-30px, 30px)
+}
+
+/* footer: slide URL */
+footer {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  text-align: right;
+  right: 30px;
+  left: unset;
+  font-size: 32px;
+  color: var(--theme-color-alt);
+}
+
+section.invert footer {
+  --theme-color-alt: var(--theme-color-alt-light);
+}
+
+/* header: breadcrumbs */
+header {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-size: 24px;
+}
+
+header strong {
+  color: var(--theme-color-alt);
+}
+
+/* too much vertical spacing in headings by default */
+section h2, section h3, section h4, section h5, section h6 {
+  margin: 5px 0;
+}
+
+/* center images */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+/* vertically center images on the right side */
+img[alt="right-justified"] {
+  position: absolute;
+  right: 100px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+}
+
+/* vertically center images on the right side */
+img[alt="indented"] {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+/* highlighting text */
+li strong {
+  font-weight: inherit;
+  color: var(--heading-strong-color);
+}
+
+blockquote strong {
+  font-weight: inherit;
+  color: var(--heading-strong-color);
+}
+

@@ -1,0 +1,18 @@
+{
+  "name": "self-sabotage-your-docs",
+  "version": "1.0.0",
+  "description": "Slides for 'Misadventures in SEO: How to self-sabotage your documentation.'",
+  "main": "index.js",
+  "scripts": {
+    "images:copy": "cp src/favicon.ico ./build && imagemin src/images/* --out-dir=build/images",
+    "build:clear": "rm -rf build && mkdir build",
+    "build": "npm run build:clear && npm run images:copy && marp src",
+    "start": "marp src --server"
+  },
+  "author": "Steven J Hicks",
+  "license": "MIT",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^3.0.2",
+    "imagemin-cli": "^7.0.0"
+  }
+}
