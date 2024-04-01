@@ -19,7 +19,7 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
-![bg](images/camunda.jpg)
+![bg](images/cropped/camunda.jpeg)
 
 <!--
 - I'm a DX engineer at Camunda
@@ -37,7 +37,7 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
-![bg](images/c7_vs_c8.jpg)
+![bg](images/cropped/c7_vs_c8.jpeg)
 
 <!--
 - a couple years ago, we made a pretty big change with our product
@@ -58,7 +58,13 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
-![bg](images/timeline_0.jpg)
+<!-- _class: invert -->
+
+# The case
+
+---
+
+![bg](images/cropped/timeline_0.jpeg)
 
 <!--
 
@@ -68,7 +74,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/timeline_1.jpg)
+![bg](images/cropped/timeline_1.jpeg)
 
 <!--
 - before the v8 release, something started happening to our v7 docs
@@ -88,7 +94,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/timeline_2.jpg)
+![bg](images/cropped/timeline_2.jpeg)
 
 <!--
 - but mar 2021, after this mysterious event -
@@ -110,7 +116,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/timeline_3.jpg)
+![bg](images/cropped/timeline_3.jpeg)
 
 <!--
 - sum 2022 - we heard from our support team
@@ -124,7 +130,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/timeline_3.jpg)
+![bg](images/cropped/timeline_4.jpeg)
 
 <!--
 
@@ -136,7 +142,13 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/c7_vs_google.jpg)
+<!-- _class: invert -->
+
+# The context
+
+---
+
+![bg](images/cropped/c7_vs_google.jpeg)
 
 <!--
 a couple important details about the c7 docs
@@ -150,23 +162,30 @@ a couple important details about the c7 docs
 - so the results we see in our in-site search
   - will match exactly the results you see on google.com
 
+- throughout this talk I'm going to be talking about Google a lot
+- in most cases you can probably substitute any other search engine for Google
+- and the principles and ideas will still apply
+- but our specific story involves google
+
 -->
 
 ---
 
-![bg](images/c7_versions.jpg)
+![bg](images/cropped/c7_versions.jpeg)
 
 <!--
 - the second important detail:
 - the c7 product is approaching ten years old.
 - the current version is 7.22, but we have documentation for every release back to 7.0.
 - That's 23 versions..and actually 2 more, because we have two other special versions called "latest" and "develop".
+- We continue to release a new version every 6 months, even though we want users to move to v8
+- so this number is even growing.
 
 -->
 
 ---
 
-duplication across versions
+![bg](images/cropped/versions_similar.jpeg)
 
 <!--
 drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq-hxFm8lfg6pw/edit#slide=id.g1cbfedf2653_0_183
@@ -176,9 +195,630 @@ drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq
 - our c7 docs, for example, might have one page about bpmn that has existed for many versions
 - and that evolves, slowly, over time
 - many times, a particular document doesn't change _at all_ across versions
+- but it's often the case that you can't see significant differences between two versions of a doc
+  - unless the versions are relatively far apart
+
+- this duplication played the starring role in this story
 
 -->
 
 ---
 
-and now switch to how google handles duplication
+![bg](images/cropped/dupes_1.jpeg)
+
+<!--
+
+- so let's talk about content duplication
+- and how search engines handle it
+
+- The internet has lots of duplicate content.
+
+- Whether it’s malicious duplication
+  - like something scraped and uncredited
+  - or perfectly altruistic syndication to reach broader audiences.
+
+- But you don’t see pure duplication in Google’s search results.
+
+-->
+
+---
+
+![bg](images/cropped/dupes_3.jpeg)
+
+<!--
+
+And that's because when Google's search engine bots see duplicated content,
+
+They choose one as canonical
+
+meaning Google recognizes it as the source of truth
+
+...
+
+So that when you search on Google,
+
+you see mostly unique results
+
+(timing: at about 10-11 minutes here)
+
+-->
+
+---
+
+![bg](images/cropped/authority_1.jpeg)
+
+<!--
+
+To decide which version of the content is canonical,
+
+Google pieces together a story about how your page fits on the internet
+
+It uses a lot of signals
+
+Like which page is linked to more
+
+To identify which one is seen as the source
+
+The more it looks like the rest of the internet trusts your site,
+
+The more likely it is to get the canonical robot arm.
+
+-->
+
+---
+
+image: link rel=canonical pointing at prettypony
+
+<!--
+
+We can even set a hint on a page
+
+To suggest to Googlebot which one we think is canonical
+
+This also helps build the evidence for one page over the other.
+
+…
+
+The examples Google gives in its docs for non-malicious duplication are things like
+
+Product pages, where the product is listed in different category pages
+
+But they never talk much about documentation sites
+
+Which is a shame, because documentation sites are an interesting case for content duplication.
+
+(it's also a shame because if there was more guidance on docs-based duplication, I wouldn't be giving this talk)
+
+-->
+
+---
+
+![bg](images/cropped/version_confusion_1.jpeg)
+
+<!--
+
+you can imagine
+
+with a documentation site containing a lot of versions
+
+and a lot of content duplicated across those versions
+
+-->
+
+---
+
+image: versions of bpmn doc with lots of arrows pointing at them, with googlebot confused
+
+<!--
+
+And pages all over the internet linking to all of those versions,
+
+You can see how Google would have a hard time choosing one true canonical
+
+for this content
+
+-->
+
+---
+
+image: google confused and pointing to latest version
+
+<!--
+
+But it does pick one canonical,
+
+And if we're lucky, it picks the latest version of the docs
+
+So that when you search for bpmn on Google
+
+(and our site),
+
+you get v7.22
+
+-->
+
+---
+
+image: google confused and pointing to an old version
+
+<!--
+
+But just as likely,
+
+possibly even more likely,
+
+Google might point its canonical robot arm at an older version of the doc
+
+in which case, Google serves that older version in its search results
+
+-->
+
+---
+
+<!-- _class: invert -->
+
+# The crime
+
+<!--
+
+and so you might be wondering
+
+ok, so Google might not be serving the right version of the docs in its search results
+
+you said there were _no_ search results
+
+soooooooo what am I missing
+
+enter that mysterious event that I showed at the beginning of the timeline
+
+that I said I know the exact date of
+
+with the very best of intentions, we introduced a change on that date
+
+that we thought would nudge Google to always serve the latest version of the docs
+
+and in fact, it caused Google to serve _no_ version of the docs
+
+-->
+
+---
+
+image: `<meta content="noindex">`
+
+<!--
+
+on every version _except_ the current version
+
+we added a `noindex` tag to every page.
+
+-->
+
+---
+
+image: noindexed versions, confused googlebot, pointing canonical at latest
+
+<!--
+
+Now the noindex tag tells search engines not to index a page
+
+So they should never appear in search results
+
+And we interpreted that to mean that Google would know not to point its canonical arm
+
+at a version that it couldn't serve in its search results
+
+And for some pages, it did exactly that
+
+-->
+
+---
+
+image: noindexed versions, confused googlebot, pointing canonical at noindexed version
+
+<!--
+
+But for most versions, it did the worst possible thing
+
+Google could crawl the older versions, it knew it existed, and it knew what was on it
+
+And it could make the case that an older version was canonical
+
+And so it pointed its canonical robot arm at an older noindexed version
+
+Which meant that when you searched for this topic
+
+You saw no search results
+
+Because Google did not index the canonical version of this page
+
+-->
+
+---
+
+image: c7 & google side-by-side, both showing no search results
+
+<!--
+
+And amplifying this problem
+
+Was that our in-site search
+
+Was driven by the same programmable search engine
+
+So when you searched on our site
+
+You _also_ saw no results.
+
+We knew we had this BPMN content....
+
+There was no way for anyone to find it.
+
+And _that_ is how we completely sabotaged our search experience.
+
+timing: 15-16 minutes?
+-->
+
+---
+
+> Duplicate without user-selected canonical
+
+_re: latest version docs_
+
+> Excluded by \`noindex\` tag
+
+_re: older version docs_
+
+<!--
+
+I do want to point out that the way we figured out what had happened
+
+was to read the error messages in Google Search Console
+
+it was pretty clear _why_ content wasn't being indexed
+
+
+-->
+
+---
+
+<!-- _class: invert -->
+
+# The resolution (eventually)
+
+<!--
+
+buuuuut it did take a very long journey to fix it.
+
+-->
+
+---
+
+# Objective
+
+## Convince Google that the latest version is canonical
+
+---
+
+image: long, windy, loopy path (maybe candyland)
+
+or steps on the loop - experiment (flask), wait (calendar), analyze (magnifying glass)
+
+<!--
+
+The feedback loop for resolving this kind of issue is horribly large and slow
+
+
+We could never find any clear guidance on how to fix this exact issue
+
+So it became a loop of trying a small experiment, waiting for weeks to see the effects, and then analyze the results and decide what to do next.
+
+-->
+
+---
+
+- Ask Google to crawl a sitemap (at all)?
+- Ask Google to crawl a sitemap without versions?
+- Ask Google to crawl a sitemap with the latest version?
+- Ask Google to crawl specific URLs?
+- Ask Google to crawl specific versions of a URL in a specific order?
+- Add versionless `canonical` hints to most recent versions?
+- Add versioned `canonical` hints to most recent versions?
+
+<!--
+re: versionless - if you visit a doc page without a version, it redirects to the latest version.
+
+we thought we could take advantage of this to get Google to always index the latest version of the docs,
+
+but in reality we just discovered a new Search Console error message: "Page with redirect".
+
+re: canonicals - we didn't really understand the importance of canonical hints, so we initially tried to get Google to recrawl the docs we wanted it to index
+
+and then later we started playing with those hints too, to see what effects we could cause
+
+-->
+
+---
+
+- Most pages were unaffected
+- Some pages were fixed
+- Some pages were affected _but not fixed_ 😭
+
+<!--
+
+The results were not great, throughout any of these experiments
+
+...
+
+nothing was predictable or repeatable.
+
+it was in incredible lesson in patience and resilience, I'm not gonna lie
+
+-->
+
+---
+
+image: half-court shot?
+
+<!--
+
+On the verge of giving up, we decided on one last experiment
+
+The most patient experiment of all
+
+We noticed that, in the past, Google seemed to do a significant re-crawl of our docs
+
+right after each released version.
+
+We hadn't had a lot of luck convincing Google to crawl the latest docs in our experiments
+
+But maybe we could rely on this big crawl after a fresh version was published.
+
+
+-->
+
+---
+
+# Objective
+
+## Build a comprehensive story for Googlebot.
+
+<!--
+
+And if we were going to take maximum advantage of a big crawl,
+
+we needed our docs to tell the most comprehensive, accurate story about our versions,
+
+to give Google the best chance of pointing its canonical robot arm at the latest version docs.
+
+-->
+
+---
+
+- Canonical hints pointing at latest version
+- Sitemap containing only the latest version
+- ~~Remove \`noindex\` tags from all versions~~
+
+<!--
+
+re: canonical hints - I still think this would have been the right move,
+
+but the experiments I ran at the time didn't suggest any positive change
+
+So we decided to leave the noindex tags in place on all older versions.
+
+-->
+
+---
+
+image: waiting?
+
+<!--
+
+and then we waited
+
+months later we released a new version of the product
+
+and published a new version of the docs
+
+and then submitted our updated Sitemap to google
+
+and then we waited again
+
+-->
+
+---
+
+image: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq-hxFm8lfg6pw/edit?pli=1#slide=id.g181a4047bbf_0_41
+
+(happy googlebot, with everything pointing at latest version)
+
+<!--
+
+and it worked!
+
+Googlebot finally agreed with us
+
+that the latest version was canonical
+
+-->
+
+---
+
+image: slack celebration
+
+<!--
+
+and most importantly, people could find things again
+
+this is a message from someone on our support team
+
+-->
+
+---
+
+<!-- _class: invert -->
+
+# The recommendation
+
+<!--
+
+The takeaway, if you're running a documentation site with multiple versions and you don't want to experience the horrible thing we did
+
+-->
+
+---
+
+The Docs says:
+
+# Build a **comprehensive** and **cohesive** story about the canonical source.
+
+---
+
+The Docs says:
+
+1. Point `link rel=canonical` from old versions to latest version.
+
+<!-- prettier-ignore -->
+2) Sitemap containing only the latest version.
+<!-- prettier-ignore -->
+3) Don't `noindex` older versions.
+
+<!--
+
+re: noindex -
+
+I mentioned that we actually didn't remove our noindex tags
+
+because experimentation at the time didn't demonstrate any improvement by doing so
+
+But Google explicitly tells you in their docs _not_ to use this as a mechanism to influence canonicalization
+
+And what's worse -- an old document showing in the search results, or no document at all?
+
+-->
+
+---
+
+![bg](images/cropped/c7_vs_c8.jpeg)
+
+<!--
+
+at the beginning I talked about how we have two sets of docs
+
+with these discoveries in our c7 docs, we looked at our c8 docs,
+
+a docusaurus site,
+
+to make sure we wouldn't relive this experience in a couple years.
+
+And there were a couple significant issues that came up.
+
+-->
+
+---
+
+image: c8 docs, with a sitemap listing all versions
+
+<!--
+
+first, d-rex by default lists all pages in the sitemap
+
+and therefore every version
+
+in our experimentation, that's definitely not what you want -- you only want the current version of docs in the sitemap.
+
+this is pretty easy to resolve.
+
+docusaurus has a configuration setting for ignoring specific paths
+
+although we wouldn't have known to use that setting if we hadn't gone through this experience
+
+-->
+
+---
+
+image: c8 docs, with bogus sitemap and self-canonicals
+
+<!--
+
+more significantly, docusuarus sets self-canonicals for every page
+
+and there's nothing _wrong_ with doing this,
+
+but as Google SEO superstar John Mueller says,
+
+the only time a self-referential canonical is _helpful_ is when the visited URL doesn't match the canonical URL. Like if there are query-string parameters or something in the URL.
+
+That's not how we use our docs, it's probably not how you use yours,
+
+and by setting self-canonicals on every version of a doc, you're not really telling Googlebot anything about the canonical source.
+
+...
+
+now there is a way to override this at the page level, by specifying a URL in the frontmatter of a doc
+
+though at the time of my investigation, that didn't actually function properly
+
+what we ended up doing instead is...
+
+-->
+
+---
+
+link: to somewhere
+
+<!--
+to have each page automatically declare a canonical based on the newest version of the doc with that same path.
+
+
+if you're running a docusaurus instance, with multiple versions of your docs, you might want to check out this link.
+
+it'll take you to something?? that shows how we're doing this, so that we don't have to manually add a canonical hint to every single page.
+
+-->
+
+---
+
+<!-- _class: invert -->
+
+# Who cares?
+
+<!--
+
+Does any of this even matter? Is SEO dead?
+
+With AI eating the world, and being seemingly useful as a replacement for traditional search engines,
+
+With the acronym SGE (search generative experience) suddenly seeming a lot more important than the acronym SEO
+
+does it matter what traditional Google searches turn up for our documentation site? For your documentation site?
+
+Well in our case yes, because a traditional Google search engine is what drives our in-site search.
+
+But let's be real, we're all going to be replacing in-site search with in-site AI assistants soon.
+
+As I was preparing for this talk, this question legitimately depressed me. I had a hard time thinking about it in a positive way.
+
+But eventually I did. I remembered the many other times I've learned a technology and used it heavily, then moved away from it entirely for something else.
+
+And that reminded me to embrace the journey, and focus on the principles learned.
+
+-->
+
+---
+
+1. Build a **comprehensive** and **cohesive** story.
+
+<!-- prettier-ignore -->
+2) Explain things **clearly** and **thoroughly**.
+<!-- prettier-ignore -->
+3) **Document** and **share** your learnings.
+
+<!--
+These are the learnings I take away from this experience, to apply to our impending AI search future.
+
+1 - sge rewards authority
+2 - sge rewards them
+3 - it's a nice thing to do (& sge might reward it)
+
+-->
