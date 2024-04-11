@@ -22,16 +22,17 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 ![bg](images/cropped/camunda.jpeg)
 
 <!--
-- I'm a DX engineer at Camunda
+- I work at a company named Camunda
+- Camunda is a platform for automating and orchestrating processes
+- getting your services interacting in a stable, predictable manner
+
+- I'm a DX engineer
 - basically docs infra
-- give the docs the engineering love they deserve
+-   I don't write the docs
+-   but I give the docs the engineering love they deserve
 - like customizing our docs platform,
 -   or improving the contributor experience to our docs
 -   or archiving unsupported versions of our documentation
-
-
-- Camunda is a platform for automating and orchestrating processes
-- getting your services interacting in a stable, predictable manner
 
 -->
 
@@ -383,7 +384,7 @@ and in fact, it caused Google to serve _no_ version of the docs
 
 ---
 
-image: `<meta content="noindex">`
+# `<meta content="noindex">`
 
 <!--
 
@@ -395,13 +396,22 @@ we added a `noindex` tag to every page.
 
 ---
 
-image: noindexed versions, confused googlebot, pointing canonical at latest
+image: noindexed version
 
 <!--
-
 Now the noindex tag tells search engines not to index a page
 
 So they should never appear in search results
+
+
+
+-->
+
+---
+
+image: noindexed versions, confused googlebot, pointing canonical at latest
+
+<!--
 
 And we interpreted that to mean that Google would know not to point its canonical arm
 
@@ -417,7 +427,7 @@ image: noindexed versions, confused googlebot, pointing canonical at noindexed v
 
 <!--
 
-But for most versions, it did the worst possible thing
+But for most docs, it did the worst possible thing
 
 Google could crawl the older versions, it knew it existed, and it knew what was on it
 
@@ -640,6 +650,10 @@ Googlebot finally agreed with us
 
 that the latest version was canonical
 
+we quickly saw a trend toward the latest docs being indexed
+
+and before long I saw 99% of pages indexed correctly
+
 -->
 
 ---
@@ -747,9 +761,29 @@ and there's nothing _wrong_ with doing this,
 
 but as Google SEO superstar John Mueller says,
 
-the only time a self-referential canonical is _helpful_ is when the visited URL doesn't match the canonical URL. Like if there are query-string parameters or something in the URL.
+-->
+
+---
+
+> ## Self-referential canonicals probably aren't helpful (TODO: get quote)
+
+_John Mueller, Google_
+
+<!--
+
+the only time a self-referential canonical is _helpful_ is when the visited URL doesn't match the canonical URL.
+
+Like if there are query-string parameters or something in the URL.
 
 That's not how we use our docs, it's probably not how you use yours,
+
+-->
+
+---
+
+image: c8 docs, with bogus sitemap and self-canonicals
+
+<!--
 
 and by setting self-canonicals on every version of a doc, you're not really telling Googlebot anything about the canonical source.
 
@@ -765,11 +799,19 @@ what we ended up doing instead is...
 
 ---
 
+image: stacks of docs, with everything under the top pointing canonical to the top
+
+<!--
+
+to have each page automatically declare a canonical based on the newest version of the doc with that same path.
+
+-->
+
+---
+
 link: to somewhere
 
 <!--
-to have each page automatically declare a canonical based on the newest version of the doc with that same path.
-
 
 if you're running a docusaurus instance, with multiple versions of your docs, you might want to check out this link.
 
@@ -820,5 +862,7 @@ These are the learnings I take away from this experience, to apply to our impend
 1 - sge rewards authority
 2 - sge rewards them
 3 - it's a nice thing to do (& sge might reward it)
+
+(& if someone had gone through this and shared it and I had been able to find it then I wouldn't have had to go through this painful experience)
 
 -->
