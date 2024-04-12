@@ -23,6 +23,8 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
+<!-- _footer: "" -->
+
 ![bg](images/camunda.jpg)
 
 <!--
@@ -69,6 +71,8 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
+<!-- _footer: "" -->
+
 ![bg](images/timeline_0.jpg)
 
 <!--
@@ -78,6 +82,8 @@ The story I have to tell you takes place over the last few years
 -->
 
 ---
+
+<!-- _footer: "" -->
 
 ![bg](images/timeline_1.jpg)
 
@@ -98,6 +104,8 @@ The story I have to tell you takes place over the last few years
 -->
 
 ---
+
+<!-- _footer: "" -->
 
 ![bg](images/timeline_2.jpg)
 
@@ -121,6 +129,8 @@ The story I have to tell you takes place over the last few years
 
 ---
 
+<!-- _footer: "" -->
+
 ![bg](images/timeline_3.jpg)
 
 <!--
@@ -134,6 +144,8 @@ The story I have to tell you takes place over the last few years
 -->
 
 ---
+
+<!-- _footer: "" -->
 
 ![bg](images/timeline_4.jpg)
 
@@ -272,7 +284,7 @@ The more likely it is to get the canonical robot arm.
 
 ---
 
-image: link rel=canonical pointing at prettypony
+![bg](images/authority_2.jpg)
 
 <!--
 
@@ -298,7 +310,7 @@ Which is a shame, because documentation sites are an interesting case for conten
 
 ---
 
-![bg](images/version_confusion_1.jpg)
+![bg](images/confused_0.jpg)
 
 <!--
 
@@ -312,7 +324,7 @@ and a lot of content duplicated across those versions
 
 ---
 
-image: versions of bpmn doc with lots of arrows pointing at them, with googlebot confused
+![bg](images/confused_1.jpg)
 
 <!--
 
@@ -326,7 +338,7 @@ for this content
 
 ---
 
-image: google confused and pointing to latest version
+![bg](images/confused_latest.jpg)
 
 <!--
 
@@ -344,7 +356,7 @@ you get v7.22
 
 ---
 
-image: google confused and pointing to an old version
+![bg](images/confused_old.jpg)
 
 <!--
 
@@ -400,11 +412,19 @@ we added a `noindex` tag to every page.
 
 ---
 
-image: noindexed version
+![bg](images/no_index_1.jpg)
 
 <!--
 Now the noindex tag tells search engines not to index a page
 
+
+-->
+
+---
+
+![bg](images/no_index_2.jpg)
+
+<!--
 So they should never appear in search results
 
 
@@ -413,7 +433,7 @@ So they should never appear in search results
 
 ---
 
-image: noindexed versions, confused googlebot, pointing canonical at latest
+![bg](images/confused_noindexed_latest.jpg)
 
 <!--
 
@@ -427,7 +447,7 @@ And for some pages, it did exactly that
 
 ---
 
-image: noindexed versions, confused googlebot, pointing canonical at noindexed version
+![bg](images/confused_noindexed_old.jpg)
 
 <!--
 
@@ -449,7 +469,7 @@ Because Google did not index the canonical version of this page
 
 ---
 
-image: c7 & google side-by-side, both showing no search results
+![bg](images/c7_vs_google_no_results.jpg)
 
 <!--
 
@@ -513,9 +533,7 @@ buuuuut it did take a very long journey to fix it.
 
 ---
 
-image: long, windy, loopy path (maybe candyland)
-
-or steps on the loop - experiment (flask), wait (calendar), analyze (magnifying glass)
+![bg](images/long_windy_road.jpg)
 
 <!--
 
@@ -571,7 +589,7 @@ it was in incredible lesson in patience and resilience, I'm not gonna lie
 
 ---
 
-image: half-court shot?
+![bg](images/half_court.jpg)
 
 <!--
 
@@ -624,7 +642,7 @@ So we decided to leave the noindex tags in place on all older versions.
 
 ---
 
-image: waiting?
+![bg](images/waiting.jpg)
 
 <!--
 
@@ -642,9 +660,7 @@ and then we waited again
 
 ---
 
-image: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq-hxFm8lfg6pw/edit?pli=1#slide=id.g181a4047bbf_0_41
-
-(happy googlebot, with everything pointing at latest version)
+![bg](images/success.jpg)
 
 <!--
 
@@ -662,7 +678,7 @@ and before long I saw 99% of pages indexed correctly
 
 ---
 
-image: slack celebration
+![image width:900 center](images/slack.png)
 
 <!--
 
@@ -686,13 +702,17 @@ The takeaway, if you're running a documentation site with multiple versions and 
 
 ---
 
-The Docs says:
+<!-- _class: the_docs_says -->
+
+![bg](images/the_docs_says.jpg)
 
 # Build a **comprehensive** and **cohesive** story about the canonical source.
 
 ---
 
-The Docs says:
+<!-- _class: the_docs_says -->
+
+![bg](images/the_docs_says.jpg)
 
 1. Point `link rel=canonical` from old versions to latest version.
 
@@ -735,7 +755,7 @@ And there were a couple significant issues that came up.
 
 ---
 
-image: c8 docs, with a sitemap listing all versions
+![bg](images/c8_sitemap_bad.jpg)
 
 <!--
 
@@ -743,11 +763,22 @@ first, d-rex by default lists all pages in the sitemap
 
 and therefore every version
 
-in our experimentation, that's definitely not what you want -- you only want the current version of docs in the sitemap.
+the sitemap is another of those signals that Google uses to determine canonical source
 
-this is pretty easy to resolve.
+and if you tell it every version is important, it doesn't help Googlebot choose one
 
-docusaurus has a configuration setting for ignoring specific paths
+and in our experimentation, that's definitely not what you want -- you only want the current version of docs in the sitemap.
+
+-->
+
+---
+
+![bg](images/c8_sitemap_good.jpg)
+
+<!--
+this is pretty easy to resolve in docusaurus.
+
+there is a configuration setting for ignoring specific paths
 
 although we wouldn't have known to use that setting if we hadn't gone through this experience
 
@@ -755,7 +786,7 @@ although we wouldn't have known to use that setting if we hadn't gone through th
 
 ---
 
-image: c8 docs, with bogus sitemap and self-canonicals
+![bg](images/c8_self_canonical.jpg)
 
 <!--
 
@@ -763,21 +794,31 @@ more significantly, docusuarus sets self-canonicals for every page
 
 and there's nothing _wrong_ with doing this,
 
-but as Google SEO superstar John Mueller says,
+but you can see again how telling Google that every version is important,
+
+is like saying none are important.
 
 -->
 
 ---
 
-> ## Self-referential canonicals probably aren't helpful (TODO: get quote)
+> ## [Self-referential canonicals] do nothing.
 
-_John Mueller, Google_
+_John Mueller, Google, [YouTube](youtube.com/watch?v=TepFVYrBVg0&t=968s)_
 
 <!--
 
-the only time a self-referential canonical is _helpful_ is when the visited URL doesn't match the canonical URL.
+as Google SEO advocate John Mueller says,
 
-Like if there are query-string parameters or something in the URL.
+(quote)
+
+if they are truly self-referential.
+
+they can be helpful when the visited URL doesn't match the canonical URL,
+
+which can happen when there are query-string parameters in the URL.
+
+(like tracking params, or a category id in a product URL)
 
 That's not how we use our docs, it's probably not how you use yours,
 
@@ -785,15 +826,17 @@ That's not how we use our docs, it's probably not how you use yours,
 
 ---
 
-image: c8 docs, with bogus sitemap and self-canonicals
+![bg](images/c8_self_canonical.jpg)
 
 <!--
 
-and by setting self-canonicals on every version of a doc, you're not really telling Googlebot anything about the canonical source.
+by setting self-canonicals on every version of a doc, you're not really telling Googlebot anything about the canonical source.
 
 ...
 
-now there is a way to override this at the page level, by specifying a URL in the frontmatter of a doc
+now docusaurus supposedly offers a way to override this at the page level,
+
+by specifying a URL in the frontmatter of a doc
 
 though at the time of my investigation, that didn't actually function properly
 
@@ -803,17 +846,20 @@ what we ended up doing instead is...
 
 ---
 
-image: stacks of docs, with everything under the top pointing canonical to the top
+![bg](images/c8_canonical_stacks.jpg)
 
 <!--
 
 to have each page automatically declare a canonical based on the newest version of the doc with that same path.
 
+when a document moves, or is deleted, within a version, that stack terminates, and a new stack begins.
+
+
 -->
 
 ---
 
-link: to somewhere
+## [stevenhicks.me/camunda-canonicals](https://stevenhicks.me/camunda-canonicals)
 
 <!--
 
@@ -870,3 +916,26 @@ These are the learnings I take away from this experience, to apply to our impend
 (& if someone had gone through this and shared it and I had been able to find it then I wouldn't have had to go through this painful experience)
 
 -->
+
+---
+
+<!-- _class: title -->
+<!-- _footer: "" -->
+
+![bg opacity:80%](images/cover.jpg)
+
+#
+
+#
+
+# Thank you!
+
+#
+
+#
+
+### 👦 Steven Hicks
+
+### ✉️ stevenhicks.me/where/
+
+### 🌎 self-sabotage-your-docs.stevenhicks.me

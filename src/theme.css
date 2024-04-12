@@ -149,3 +149,17 @@ blockquote strong {
   color: var(--heading-strong-color);
 }
 
+/* specific slides */
+
+section.the_docs_says h1 {
+  margin-left: 500px;
+}
+
+section.the_docs_says ol {
+  margin-left: 500px;
+}
+
+section.the_docs_says ol:first-of-type {
+  margin-top: 100px !important;
+}
+
