@@ -9,17 +9,21 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ![bg opacity:80%](images/cover.jpg)
 
-# Misadventures in SEO:<br/>How to self-sabotage your documentation
+# Misadventures in SEO:<br/>How to self-sabotage<br/>your documentation
+
+#
+
+#
 
 ### 👦 Steven Hicks
 
-### 🌎 self-sabotage-your-docs.stevenhicks.me
-
 ### ✉️ stevenhicks.me/where/
+
+### 🌎 self-sabotage-your-docs.stevenhicks.me
 
 ---
 
-![bg](images/cropped/camunda.jpeg)
+![bg](images/camunda.jpg)
 
 <!--
 - I work at a company named Camunda
@@ -38,7 +42,7 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
-![bg](images/cropped/c7_vs_c8.jpeg)
+![bg](images/c7_vs_c8.jpg)
 
 <!--
 - a couple years ago, we made a pretty big change with our product
@@ -65,7 +69,7 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ---
 
-![bg](images/cropped/timeline_0.jpeg)
+![bg](images/timeline_0.jpg)
 
 <!--
 
@@ -75,7 +79,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/cropped/timeline_1.jpeg)
+![bg](images/timeline_1.jpg)
 
 <!--
 - before the v8 release, something started happening to our v7 docs
@@ -95,7 +99,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/cropped/timeline_2.jpeg)
+![bg](images/timeline_2.jpg)
 
 <!--
 - but mar 2021, after this mysterious event -
@@ -117,7 +121,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/cropped/timeline_3.jpeg)
+![bg](images/timeline_3.jpg)
 
 <!--
 - sum 2022 - we heard from our support team
@@ -131,7 +135,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/cropped/timeline_4.jpeg)
+![bg](images/timeline_4.jpg)
 
 <!--
 
@@ -149,7 +153,7 @@ The story I have to tell you takes place over the last few years
 
 ---
 
-![bg](images/cropped/c7_vs_google.jpeg)
+![bg](images/c7_vs_google.jpg)
 
 <!--
 a couple important details about the c7 docs
@@ -172,7 +176,7 @@ a couple important details about the c7 docs
 
 ---
 
-![bg](images/cropped/c7_versions.jpeg)
+![bg](images/c7_versions.jpg)
 
 <!--
 - the second important detail:
@@ -186,7 +190,7 @@ a couple important details about the c7 docs
 
 ---
 
-![bg](images/cropped/versions_similar.jpeg)
+![bg](images/versions_similar.jpg)
 
 <!--
 drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq-hxFm8lfg6pw/edit#slide=id.g1cbfedf2653_0_183
@@ -205,7 +209,7 @@ drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq
 
 ---
 
-![bg](images/cropped/dupes_1.jpeg)
+![bg](images/dupes_1.jpg)
 
 <!--
 
@@ -224,7 +228,7 @@ drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq
 
 ---
 
-![bg](images/cropped/dupes_3.jpeg)
+![bg](images/dupes_3.jpg)
 
 <!--
 
@@ -246,7 +250,7 @@ you see mostly unique results
 
 ---
 
-![bg](images/cropped/authority_1.jpeg)
+![bg](images/authority_1.jpg)
 
 <!--
 
@@ -294,7 +298,7 @@ Which is a shame, because documentation sites are an interesting case for conten
 
 ---
 
-![bg](images/cropped/version_confusion_1.jpeg)
+![bg](images/version_confusion_1.jpg)
 
 <!--
 
@@ -610,7 +614,7 @@ to give Google the best chance of pointing its canonical robot arm at the latest
 
 <!--
 
-re: canonical hints - I still think this would have been the right move,
+re: noindex - I still think this would have been the right move,
 
 but the experiments I ran at the time didn't suggest any positive change
 
@@ -713,7 +717,7 @@ And what's worse -- an old document showing in the search results, or no documen
 
 ---
 
-![bg](images/cropped/c7_vs_c8.jpeg)
+![bg](images/c7_vs_c8.jpg)
 
 <!--
 
