@@ -205,7 +205,6 @@ a couple important details about the c7 docs
 ![bg](images/versions_similar.jpg)
 
 <!--
-drawing: https://docs.google.com/presentation/d/1XvnWK8gM7FnzBveUYXPE7GkYKGifvzq-hxFm8lfg6pw/edit#slide=id.g1cbfedf2653_0_183
 
 - the thing about maintaining many versions of docs
 - is that there's a lot of duplication.
@@ -378,6 +377,8 @@ in which case, Google serves that older version in its search results
 
 <!--
 
+14 mins
+
 and so you might be wondering
 
 ok, so Google might not be serving the right version of the docs in its search results
@@ -521,7 +522,9 @@ it was pretty clear _why_ content wasn't being indexed
 
 <!--
 
-buuuuut it did take a very long journey to fix it.
+it was one thing to figure out what had happened and why
+
+it was a whole nother adventure trying to crawl out of that hole.
 
 -->
 
@@ -557,15 +560,29 @@ So it became a loop of trying a small experiment, waiting for weeks to see the e
 - Add versioned `canonical` hints to most recent versions?
 
 <!--
+
+this is a summary of the experiments we ran
+
+we spent a lot of time trying to get google to even crawl things reliably.
+
+unsuccessfully.
+
+then we moved on to trying to get google to choose the correct canonicals.
+
+---
+
+(cut below for timing)
+
+re: canonicals - we didn't really understand the importance of canonical hints, so we initially tried to get Google to recrawl the docs we wanted it to index
+
+and then later we started playing with those hints too, to see what effects we could cause
+
 re: versionless - if you visit a doc page without a version, it redirects to the latest version.
 
 we thought we could take advantage of this to get Google to always index the latest version of the docs,
 
 but in reality we just discovered a new Search Console error message: "Page with redirect".
 
-re: canonicals - we didn't really understand the importance of canonical hints, so we initially tried to get Google to recrawl the docs we wanted it to index
-
-and then later we started playing with those hints too, to see what effects we could cause
 
 -->
 
@@ -577,9 +594,11 @@ and then later we started playing with those hints too, to see what effects we c
 
 <!--
 
+again, unsuccessfully.
+
 The results were not great, throughout any of these experiments
 
-...
+...read em...
 
 nothing was predictable or repeatable.
 
@@ -594,6 +613,8 @@ it was in incredible lesson in patience and resilience, I'm not gonna lie
 <!--
 
 On the verge of giving up, we decided on one last experiment
+
+a half court shot
 
 The most patient experiment of all
 
@@ -695,6 +716,8 @@ this is a message from someone on our support team
 # The recommendation
 
 <!--
+
+25min
 
 The takeaway, if you're running a documentation site with multiple versions and you don't want to experience the horrible thing we did
 
