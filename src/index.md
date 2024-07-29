@@ -21,6 +21,14 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 ### 🌎 self-sabotage-your-docs.stevenhicks.me
 
+<!--
+
+thanks to attendees & organizers & sponsors
+
+for written version, visit my blog @ stevenhicks.me
+
+-->
+
 ---
 
 <!-- _footer: "" -->
@@ -32,13 +40,17 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 - Camunda is a platform for automating and orchestrating processes
 - getting your services interacting in a stable, predictable manner
 
+- camunda is originally based in berlin, now remote
+- I'm in Milwaukee
+
 - I'm a DX engineer
 - basically docs infra
 -   I don't write the docs
--   but I give the docs the engineering love they deserve
-- like customizing our docs platform,
--   or improving the contributor experience to our docs
--   or archiving unsupported versions of our documentation
+-   but I give the docs the engineering love they deserve, like...
+
+1. customizing our docs platform,
+2. improving the contributor experience to our docs (describe it)
+3. archiving unsupported versions of our documentation
 
 -->
 
@@ -48,18 +60,21 @@ footer: 'stevenhicks.me/where | self-sabotage-your-docs.stevenhicks.me'
 
 <!--
 - a couple years ago, we made a pretty big change with our product
+
 - we moved from focusing on you hosting on your own infrastructure
 -   to us hosting for you in our SaaS platform.
+
 - this was the change from Camunda 7 to Camunda 8; we call them c7 and c8 in case I do that
+
 - with a new focus, and a new version number, we also built new docs.
 - our v7 docs were built with hugo; v8 docs with docusaurus
+
 - both of these versions of our product are still supported for now
 - but our team, devex, took a stance that while we would technically still support the v7 docs, we would minimize that support, to focus on v8 docs.
 - basically, we'd shove them in the back of the closet, to collect dust and cobwebs, ...
-- unless something went very wrong.
 
-- and that is foreshadowing.
-- I think. I am talking to a room full of people with significantly more writing experience and education than me so if I don't know the definition of foreshadowing please let me live in blissful naivety.
+- unless something went very wrong.
+- and it did
 
 -->
 
@@ -88,17 +103,20 @@ The story I have to tell you takes place over the last few years
 ![bg](images/timeline_1.jpg)
 
 <!--
-- before the v8 release, something started happening to our v7 docs
 - prior to mar 2021, if you searched for the acronym bpmn
   - you'd see ~20 relevant results
+
   - bpmn stands for...
   - & it's a critical element of the camunda product
-    - The camunda product is built on the idea that you can model a process graphically
-    - using an open standard called bpmn
-    - and then camunda's engine will execute that process
-    - as it can interpret that open standard, bpmn
+
+  - The camunda product is built on the idea that you can model a process graphically
+    - using bpmn, an open standard
+    - and then camunda's engine will interpret it and execute that process
+
   - because it's a critical element of the product,
     - our docs have a lot of content about bpmn
+
+- then something started happening to our v7 docs
   - you'll find out later why I know that date precisely
 
 -->
@@ -110,18 +128,22 @@ The story I have to tell you takes place over the last few years
 ![bg](images/timeline_2.jpg)
 
 <!--
-- but mar 2021, after this mysterious event -
-  - search results began declining
+- search results began declining
   - in both google and site search
+
 - dec 2021 - users were impacted enough to mention it in our forums
   - at this point, you'd see fewer relevant results for bpmn
     - but still some results
-  - their complaints were somewhat vague
+
+  - their complaints were accurate, but also vague
+    - "search isn't as good"
     - the docs are not returning as many relevant results
     - and the search experience seems to be degrading
-  - but the diminishing results were inconsistent
+
+  - the diminishing results were inconsistent
     - and hard to isolate or predict
     - and they were still getting some results
+
   - so since we intentionally wanted to shelve this version of the docs,
     - just kind of seemed like "ehhhhhh, it's fine"
 
@@ -135,11 +157,15 @@ The story I have to tell you takes place over the last few years
 
 <!--
 - sum 2022 - we heard from our support team
+
   - they confirmed that not only had things degraded,
     - but the search had become basically useless.
+
   - 0 relevant results for bpmn!
     - camunda doesn't exist without bpmn!
     - and despite any flaws our docs may have, we know those docs are there!
+
+- XXXXX cut for time
   - each member of support basically had to build a memory palace to find things
 -->
 
@@ -173,16 +199,17 @@ a couple important details about the c7 docs
 1. the docs have an in-site search
 
 - driven by a programmable google search engine
-- which is basically an API wrapper around google search
-- there are customizations and filters you can apply to a programmable search engine
-- but we don't, really.
+  - which is basically an API wrapper around google search
+  - there are customizations and filters you can apply to a programmable search engine
+  - but we don't, really.
+
 - so the results we see in our in-site search
   - will match exactly the results you see on google.com
 
 - throughout this talk I'm going to be talking about Google a lot
-- in most cases you can probably substitute any other search engine for Google
-- and the principles and ideas will still apply
-- but our specific story involves google
+  - in most cases you can probably substitute any other search engine for Google
+  - and the principles and ideas will still apply
+  - but our specific story involves google
 
 -->
 
@@ -192,10 +219,16 @@ a couple important details about the c7 docs
 
 <!--
 - the second important detail:
+
 - the c7 product is approaching ten years old.
-- the current version is 7.22, but we have documentation for every release back to 7.0.
-- That's 23 versions..and actually 2 more, because we have two other special versions called "latest" and "develop".
+- the current version is 7.22 (ha!), but we have documentation for every release back to 7.0.
+
+- That's 23 versions..
+
+- and actually 2 more, because we have two other special versions called "latest" and "develop".
+
 - We continue to release a new version every 6 months, even though we want users to move to v8
+
 - so this number is even growing.
 
 -->
@@ -208,10 +241,12 @@ a couple important details about the c7 docs
 
 - the thing about maintaining many versions of docs
 - is that there's a lot of duplication.
+
 - our c7 docs, for example, might have one page about bpmn that has existed for many versions
 - and that evolves, slowly, over time
+
 - many times, a particular document doesn't change _at all_ across versions
-- but it's often the case that you can't see significant differences between two versions of a doc
+- and it's often the case that you can't see significant differences between two versions of a doc
   - unless the versions are relatively far apart
 
 - this duplication played the starring role in this story
@@ -229,11 +264,14 @@ a couple important details about the c7 docs
 
 - The internet has lots of duplicate content.
 
-- Whether it’s malicious duplication
+- some is malicious duplication
   - like something scraped and uncredited
-  - or perfectly altruistic syndication to reach broader audiences.
 
-- But you don’t see pure duplication in Google’s search results.
+- but most is perfectly altruistic
+  - syndication to reach broader audiences.
+  - or product pages existing in multiple categories
+
+- You don’t see pure duplication in Google’s search results, though
 
 -->
 
@@ -244,7 +282,6 @@ a couple important details about the c7 docs
 <!--
 
 And that's because when Google's search engine bots see duplicated content,
-
 They choose one as canonical
 
 meaning Google recognizes it as the source of truth
@@ -252,7 +289,6 @@ meaning Google recognizes it as the source of truth
 ...
 
 So that when you search on Google,
-
 you see mostly unique results
 
 (timing: at about 10-11 minutes here)
@@ -270,13 +306,13 @@ To decide which version of the content is canonical,
 Google pieces together a story about how your page fits on the internet
 
 It uses a lot of signals
-
-Like which page is linked to more
-
 To identify which one is seen as the source
 
-The more it looks like the rest of the internet trusts your site,
+* which page is linked to more
+* sitemap
+* others
 
+The more it looks like the rest of the internet trusts your site,
 The more likely it is to get the canonical robot arm.
 
 -->
@@ -294,6 +330,8 @@ To suggest to Googlebot which one we think is canonical
 This also helps build the evidence for one page over the other.
 
 …
+
+-- cut for time
 
 The examples Google gives in its docs for non-malicious duplication are things like
 
@@ -384,15 +422,12 @@ and so you might be wondering
 ok, so Google might not be serving the right version of the docs in its search results
 
 you said there were _no_ search results
-
 soooooooo what am I missing
 
 enter that mysterious event that I showed at the beginning of the timeline
-
 that I said I know the exact date of
 
-with the very best of intentions, we introduced a change on that date
-
+we introduced a change on that date
 that we thought would nudge Google to always serve the latest version of the docs
 
 and in fact, it caused Google to serve _no_ version of the docs
@@ -404,6 +439,8 @@ and in fact, it caused Google to serve _no_ version of the docs
 # `<meta content="noindex">`
 
 <!--
+
+we introduced the noindex directive
 
 on every version _except_ the current version
 
@@ -455,13 +492,10 @@ And for some pages, it did exactly that
 But for most docs, it did the worst possible thing
 
 Google could crawl the older versions, it knew it existed, and it knew what was on it
-
 And it could make the case that an older version was canonical
-
 And so it pointed its canonical robot arm at an older noindexed version
 
 Which meant that when you searched for this topic
-
 You saw no search results
 
 Because Google did not index the canonical version of this page
@@ -477,15 +511,12 @@ Because Google did not index the canonical version of this page
 And amplifying this problem
 
 Was that our in-site search
-
 Was driven by the same programmable search engine
 
 So when you searched on our site
-
 You _also_ saw no results.
 
 We knew we had this BPMN content....
-
 There was no way for anyone to find it.
 
 And _that_ is how we completely sabotaged our search experience.
@@ -493,7 +524,11 @@ And _that_ is how we completely sabotaged our search experience.
 timing: 15-16 minutes?
 -->
 
----
+<!--
+
+XXXXXX
+
+-- REMOVE THIS SLIDE for time
 
 > Duplicate without user-selected canonical
 
@@ -545,7 +580,9 @@ The feedback loop for resolving this kind of issue is horribly large and slow
 
 We could never find any clear guidance on how to fix this exact issue
 
-So it became a loop of trying a small experiment, waiting for weeks to see the effects, and then analyze the results and decide what to do next.
+So it became a loop of trying a small experiment,
+waiting for weeks to see the effects, and then
+analyze the results and decide what to do next.
 
 -->
 
@@ -570,6 +607,8 @@ unsuccessfully.
 then we moved on to trying to get google to choose the correct canonicals.
 
 ---
+
+XXXXX
 
 (cut below for timing)
 
@@ -619,11 +658,9 @@ a half court shot
 The most patient experiment of all
 
 We noticed that, in the past, Google seemed to do a significant re-crawl of our docs
-
 right after each released version.
 
 We hadn't had a lot of luck convincing Google to crawl the latest docs in our experiments
-
 But maybe we could rely on this big crawl after a fresh version was published.
 
 
@@ -755,6 +792,14 @@ because experimentation at the time didn't demonstrate any improvement by doing 
 But Google explicitly tells you in their docs _not_ to use this as a mechanism to influence canonicalization
 
 And what's worse -- an old document showing in the search results, or no document at all?
+
+...
+
+Docs McPUffins, like doc mcstuffins....
+
+Docs plural, because she cares about documentation, not stuffed animals with booboos
+
+And McPuffins, cuz she's a puffin.
 
 -->
 
@@ -899,6 +944,32 @@ it'll take you to something?? that shows how we're doing this, so that we don't 
 # Who cares?
 
 <!--
+
+Preparing this talk was weirdly depressing for me.
+
+You spend months investigating a really strange problem, learning things,
+
+and you can't wait to figure it out to share it with the world.
+
+But when you figure it out,
+
+the world cares a lot more about AI-based search instead of classic search engines
+
+We now have a new scary acronym from Google, SGE (search generative experience),
+
+which completely changes how we'll get our content in front of users.
+
+Is SEO dead? Is it dying? I don't think so.
+
+But it's certainly taking a heavy blow right now. I'm curious to hear what you think about this, please come talk to me,
+
+and I've seen several Ai-search sessions in the unconference.
+
+Having said that, there are some things I'm taking away from this experience
+
+that I think are applicable even in an SGE AI-driven search world.
+
+-- OLD
 
 Does any of this even matter? Is SEO dead?
 
