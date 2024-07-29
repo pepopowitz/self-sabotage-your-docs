@@ -1033,3 +1033,19 @@ These are the learnings I take away from this experience, to apply to our impend
 ### ✉️ stevenhicks.me/where/
 
 ### 🌎 self-sabotage-your-docs.stevenhicks.me
+
+---
+
+<!-- _footer: "" -->
+
+![bg](images/that-sponsors.png)
+
+---
+
+<!-- _class: invert -->
+
+# Shame~~less~~ful self-promotion.
+
+### [youtube.com/@2RadDads](https://www.youtube.com/@2RadDads)
+
+![w:200 right-justified](images/2raddads.png)
