@@ -75,6 +75,7 @@ for written version, visit my blog @ stevenhicks.me
 
 - unless something went very wrong.
 - and it did
+- and that's why I'm telling you this story, about our c7 documentation
 
 -->
 
