@@ -1048,4 +1048,4 @@ These are the learnings I take away from this experience, to apply to our impend
 
 ### [youtube.com/@2RadDads](https://www.youtube.com/@2RadDads)
 
-![w:200 right-justified](images/2raddads.png)
+![w:300 right-justified](images/2raddads.png)
